@@ -4,7 +4,6 @@ name: Acrolinx Content Analysis
 on:
   # Push events - analyze changed files
   push:
-    branches: [ main ]
   # Pull request events - analyze PR changes
   pull_request:
     branches: [ main ]
