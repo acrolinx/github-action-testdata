@@ -4,75 +4,20 @@ name: Acrolinx Content Analysis
 on:
   # Push events - analyze changed files
   push:
-    branches: [ main, develop ]
-    paths:
-      - '**.md'
-      - '**.txt'
-  
+    branches: [ main ]
   # Pull request events - analyze PR changes
   pull_request:
     branches: [ main ]
-    paths:
-      - '**.md'
-      - '**.txt'
+  
   
   # Manual trigger for full repository analysis
   workflow_dispatch:
-    inputs:
-      analysis_type:
-        description: 'Type of analysis to run'
-        required: true
-        default: 'full'
-        type: choice
-        options:
-          - full
-          - markdown-only
-          - text-only
-      dialect:
-        description: 'Language dialect'
-        required: false
-        default: 'american_english'
-        type: choice
-        options:
-          - american_english
-          - british_english
-      tone:
-        description: 'Writing tone'
-        required: false
-        default: 'formal'
-        type: choice
-        options:
-          - formal
-          - informal
-          - academic
-      style_guide:
-        description: 'Style guide'
-        required: false
-        default: 'ap'
-        type: choice
-        options:
-          - ap
-          - chicago
-          - apa
-
-# Environment variables for the workflow
-env:
-  ANALYSIS_TYPE: ${{ github.event.inputs.analysis_type || 'auto' }}
 
 jobs:
   # Basic content analysis job
   analyze-content:
     name: Content Quality Analysis
     runs-on: ubuntu-latest
-    
-    # Only run if there are supported files to analyze
-    if: |
-      github.event_name == 'workflow_dispatch' ||
-      contains(github.event.head_commit.modified, '.md') ||
-      contains(github.event.head_commit.modified, '.txt') ||
-      contains(github.event.pull_request.files.*.filename, '.md') ||
-      contains(github.event.pull_request.files.*.filename, '.txt')
-
     
     steps:
       # Checkout the repository
@@ -86,8 +31,9 @@ jobs:
         id: acrolinx-basic
         uses: acrolinx/nextgen-analyzer@v0.0.1
         with:
-          acrolinx_token: ${{ secrets.ACROLINX_TOKEN }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          dialect: ${{ github.event.inputs.dialect || 'american_english' }}
-          tone: ${{ github.event.inputs.tone || 'formal' }}
-          style-guide: ${{ github.event.inputs.style_guide || 'ap' }}
+          tone: formal
+          dialect: american_english
+          style-guide: ap
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACROLINX_TOKEN: ${{ secrets.ACROLINX_TOKEN }}
