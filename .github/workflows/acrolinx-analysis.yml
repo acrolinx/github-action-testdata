@@ -37,7 +37,7 @@ jobs:
         with:
           tone: formal
           dialect: american_english
-          style-guide: ap
+          style-guide: microsoft
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ACROLINX_TOKEN: ${{ secrets.ACROLINX_TOKEN }}
