@@ -13,6 +13,11 @@ on:
   # Manual trigger for full repository analysis
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pull-requests: write
+  statuses: write
+
 jobs:
   # Basic content analysis job
   analyze-content:
