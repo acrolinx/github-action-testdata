@@ -23,13 +23,11 @@ This repository contains sample content files and a comprehensive GitHub Actions
 │   ├── acrolinx_platform_features.md
 │   └── acrolinx_company_profile.md
 ├── text/                        # Sample text files
-│   ├── acrolinx_leadership.txt
-│   ├── acrolinx_customers.txt
-│   ├── acrolinx_technology.txt
-│   └── acrolinx_company_overview.txt
-├── docx/                        # Other file types (not analyzed)
-├── pdf/
-└── xml/
+    ├── acrolinx_leadership.txt
+    ├── acrolinx_customers.txt
+    ├── acrolinx_technology.txt
+    └── acrolinx_company_overview.txt
+
 ```
 
 ## 🚀 How to Use This Demo
@@ -188,3 +186,8 @@ You can customize this demo by:
 **Ready to improve your content quality?** 🚀
 
 Start by triggering the workflow and see how Acrolinx NextGen Analyzer can help improve your content quality!
+
+## License
+
+This project is licensed under the Apache-2.0 License - see the [LICENSE](LICENSE) file
+for details.
