@@ -12,7 +12,7 @@
 - **Reduced Costs**: Minimizes the need for extensive editing and revision.
 - **Scalability**: Supports growing content teams and increasing content volumes.
 
-## ROI and Impact
+## ROI and Impacts
 
 ### Measurable Outcomes
 - **50% Reduction** in content review time for many customers
