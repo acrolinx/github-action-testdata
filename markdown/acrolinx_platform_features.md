@@ -1,6 +1,6 @@
 # Acrolinx Platform Features
 
-## Core Capabilities
+## Core Capability
 
 ### Content Analysis
 - **Real-time Feedback**: Provides instant suggestions for grammar, style, and tone improvements
