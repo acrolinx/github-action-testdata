@@ -32,4 +32,7 @@
 ### Advanced Analytics
 - Comprehensive reporting dashboards
 - Performance metrics and insights
-- Custom analytics and data export capabilities 
+- Custom analytics and data export capabilities
+
+### Mobile Accessibility
+The platform offers mobile-responsive interfaces and mobile applications, enabling content creators to access Acrolinx features and receive real-time feedback while working on-the-go across various devices and platforms. 

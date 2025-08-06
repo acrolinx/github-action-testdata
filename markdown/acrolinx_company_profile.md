@@ -17,3 +17,6 @@ Acrolinx leverages advanced natural language processing and machine learning alg
 
 ## Future Vision
 The company is committed to advancing the field of AI-powered content optimization and expanding its global footprint to serve more organizations worldwide.
+
+## Sustainability Commitment
+Acrolinx is dedicated to environmental responsibility and sustainable business practices, implementing green initiatives across its global operations and supporting customers in their sustainability goals.
