@@ -35,7 +35,7 @@ jobs:
       # Run Acrolinx analysis with basic configuration
       - name: Run Acrolinx Analysis
         id: acrolinx-analysis
-        uses: acrolinx/nextgen-analyzer@v0.0.6
+        uses: acrolinx/nextgen-analyzer@v0.0.7
         with:
           tone: formal
           dialect: american_english
